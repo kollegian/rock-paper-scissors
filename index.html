@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+    <body>
+    <script>
+    let choices=["rock", "paper", "scissors"];
+    function computerplay(){
+        let a=Math.floor(Math.random()*3);
+        console.log(a);
+        return choices[a];
+    }    
+    function playround(playerSelection, computerSelection){
+        playerSelection=playerSelection.toLowerCase();
+        
+        if(playerSelection==computerSelection){
+            console.log("draw");
+            
+        } else if((playerSelection=="rock" && computerSelection=="scissors") || (playerSelection=="scissors" && computerSelection=="paper")
+        || playerSelection=="paper" && computerSelection=="rock"){
+            console.log("You win congrats");
+        } else console.log("comp wins.Sorry");
+        
+    }
+    let i=0;
+    function play(){
+    while(i<5){
+        let playerSelection=prompt("Please choose rock, paper,scissors");
+        let computerSelection=computerplay();
+        console.log(computerSelection);
+        playround(playerSelection, computerSelection);
+        i++;
+    }
+}
+
+    </script>
+    </body>
+
+
+</html>
