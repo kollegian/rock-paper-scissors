@@ -1,0 +1,1 @@
+A basic project on Rock Paper Scissors. Can only be layed through console. No interface created at this point but will be added. 
